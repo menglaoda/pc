@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>完成注册</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<script src="../js/jquery-1.12.0.js"></script>
+		<script src="../js/cookie.js"></script>
+		<style>
+					body{
+			background: white;
+		}
+		a:hover{
+			color: red;
+		}
+			.navigation img{
+			width: 1280px;
+			overflow: hidden;
+        }
+/*.heda是导航的首部盒子*/
+.head{
+	height: 40px;
+	background: white;
+	border-bottom:solid 2px #e9e9e9 ;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	overflow: hidden;
+}
+.head ul{
+	margin-left: 100px;
+	height: 36px;
+	float: left;
+    
+}
+.head li{
+	margin-top: 4px;
+	text-align: center;
+	width: 100px;
+	height: 34px;
+	float: left;
+	line-height: 34px;
+	border-right:solid 1px #e9e9e9 ;
+    
+	
+}
+.headli_1{
+    border-left: 1px solid #e9e9e9 ;
+    border-top: 1px solid #e9e9e9 ;
+    
+}
+.headli{
+ 
+    border-top: 1px solid #e9e9e9 ;
+    
+}
+
+.head img{
+	float: left;
+	width: 13px;
+	height: 50px;
+	position: absolute;
+	left: 310px;
+	top: 15px;
+}
+.head div{
+	
+	float: left;
+	margin-left: 200px;
+	margin-top: 10px;
+}
+.head span{
+	padding: 1px 10px;
+	border-right: #e9e9e9 1px solid;
+}
+.logo{
+    float: left;
+    margin-left: 100px;
+	width: 150px;
+	height: 60px;
+	margin-top: 30px;
+	
+}
+.logo img{
+	width: 150px;
+	height: 60px;
+	
+}
+.weibu_3{
+	height: 170px;
+	
+}
+
+.weibu_3_1 {
+	margin-left: 300px;
+	margin-top: 30px;
+	
+	height: 60px;
+ 
+}
+
+.weibu_3_1 li{
+	float: left;
+	font-size: 20px;
+	padding: 0px 30px;
+	border-left: 1px solid #bfbfbf;
+}
+.weibu_3_2 {
+	margin-left: 350px;
+	
+	height: 30px;
+   
+}
+.weibu_3_3 {
+	margin-left: 600px;
+	width: 100px;
+	height: 40px;
+   
+}
+.weibu_3_4 {
+	margin-left: 550px;
+	width: 250px;
+	height: 20px;
+   
+}
+.weibu_3_4 img{
+	float: left;
+}
+.weibu_3_4 p{
+	float: left;
+}
+
+.middle{
+	clear: both;
+	width: 1280px;
+	height: 400px;
+	background: #E7E7E7 ;
+	position: relative;
+}
+.middle_1{
+	width: 800px;
+	height: 300px;
+	border: solid 1px #bfbfbf;
+	position: absolute;
+    left: 230px;
+    top: 50px;	
+    text-align: center;
+}
+.middle_1_1{
+	width: 350px;
+	height: 300px;
+	
+	float: left;
+}
+.middle_1_1 h2{
+	color: green;
+	margin-top: 50px;
+}
+.middle_1_1 p{
+	color: green;
+	margin-top: 10px;
+}
+.middle_1_1 b{
+	color: red;
+}
+.middle_1_1 .input1{
+	margin-top: 10px;
+	width: 100px;
+	height: 30px;
+	background: orange;
+}
+.middle_1_1 h6{
+	margin-top: 10px;
+}
+.middle_1_1 .input2{
+	margin-top: 10px;
+	
+	background: sandybrown;
+}
+.middle_1_2{
+	width: 350px;
+	height: 300px;
+	
+	float: left;
+	margin-left: 80px;
+}
+.color{
+	color: red;
+}
+		</style>
+		
+	<!--	<script src="../js/dengluyangzheng.js"></script>-->
+		<script>
+			onload =function(){
+				var bb = document.getElementById("bb");
+				var bb3 = document.getElementById("bb3");
+				var bb4 = document.getElementById("bb4");
+				var sj = getCookie("name1","/");
+				    console.log(sj);
+					console.log(bb.innerHTML);
+				bb.innerHTML=sj;	
+//				bb3.innerHTML=sj;
+//				bb4.innerHTML="退出";
+//				bb3.style.color="red";
+//				bb4.onclick = function(){
+//					    
+//					    removeCookie("name1");
+//					    bb3.innerHTML="登录";
+//					    bb4.innerHTML="免费注册";
+//				       }
+			}
+		</script>
+	</head>
+	<body>
+		<div class="navigation">
+				<a href="#"><img src="../img/static/first.jpg" /></a>
+				<div class="head">
+					<ul>
+						<li><a href="../index.html">母婴之家</a></li>
+						<li><a href="#">母婴海淘</a></li>
+						<li class="oli"><a href="#"><img src="../img/dynamic/shouji.png"/>手机版</a></li>
+					</ul>
+					<div>
+						<span >欢迎来到母婴之家！&ensp;&ensp;<a id="bb3" href="#">[免费注册]</a>&ensp;<a id="bb4" href="zhuce.html">登录</a></span>
+						<span><a href="#">我的订单</a></span>
+						<span><a href="#">客户服务</a></span>
+						<span><a href="#">商业合作</a></span>
+						<span><a href="#">网址导航</a></span>
+					</div>
+				</div>
+				<div class="logo">
+						<a href="#"><img src="../img/static/logo29new.png" /></a>
+				</div>	
+				
+		</div>
+		<div class="middle">
+			<div class="middle_1">
+				<div class="middle_1_1">
+					<h2 id="h22">恭喜你，</h2>
+					<p><b id="bb">123</b>注册成为母婴之家会员</p>
+					<input class="input1" type="submit" value="注册完成" />
+					<h6>完成邮箱验证，可以享受更多优惠</h6>
+					<input class="input2" type="submit" value="邮箱验证" />
+				</div>
+				<div class="middle_1_2">
+					<img src="../img/static/zhuce.png" />
+				</div>
+			</div>
+			
+			
+		</div>
+		<div class="weibu_3">
+					<div class="weibu_3_1">
+							<ul>
+								<li class="oli"><a href="#">首页</a></li>
+								<li><a href="#">公司简介</a></li>
+								<li><a href="#">人才招聘</a></li>
+								<li><a href="#">合作联系</a></li>
+								<li><a href="#">企业理念</a></li>
+							</ul>
+					</div>
+					<div class="weibu_3_2">
+					    <p> Copyright©2003 - 2016 muyingzhijia.com All Rights Reserved沪ICP备09021709号 </p>
+					</div>
+					<div class="weibu_3_3">
+						<img src="../img/static/shanghai_industry.gif"/>
+					</div>
+					<div class="weibu_3_4">
+						<img src="../img/static/ghs.png" />
+						<p><a href="#">沪公网安备 31010402000751号</a></p>
+					</div>
+		</div>
+	</body>
+</html>

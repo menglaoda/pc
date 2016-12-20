@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<script src="../js/jquery-1.12.0.js"></script>
+		<script src="../js/cookie.js"></script>
+		<style>
+		body{
+			background: white;
+		}
+		a:hover{
+			color: red;
+		}
+			.navigation img{
+			width: 1280px;
+			overflow: hidden;
+        }
+/*.heda是导航的首部盒子*/
+.head{
+	height: 40px;
+	background: white;
+	border-bottom:solid 2px #e9e9e9 ;
+	position: relative;
+	left: 0px;
+	top: 0px;
+	overflow: hidden;
+}
+.head ul{
+	margin-left: 100px;
+	height: 36px;
+	float: left;
+    
+}
+.head li{
+	margin-top: 4px;
+	text-align: center;
+	width: 100px;
+	height: 34px;
+	float: left;
+	line-height: 34px;
+	border-right:solid 1px #e9e9e9 ;
+    
+	
+}
+.headli_1{
+    border-left: 1px solid #e9e9e9 ;
+    border-top: 1px solid #e9e9e9 ;
+    
+}
+.headli{
+ 
+    border-top: 1px solid #e9e9e9 ;
+    
+}
+
+.head img{
+	float: left;
+	width: 13px;
+	height: 50px;
+	position: absolute;
+	left: 310px;
+	top: 15px;
+}
+.head div{
+	
+	float: left;
+	margin-left: 200px;
+	margin-top: 10px;
+}
+.head span{
+	padding: 1px 10px;
+	border-right: #e9e9e9 1px solid;
+}
+/*.middle是中间的意思，导航的中间盒子*/
+.middle{
+	background: white;
+	height: 123px;
+	overflow: hidden;
+}
+.logo{
+    float: left;
+    margin-left: 100px;
+	width: 150px;
+	height: 60px;
+	margin-top: 30px;
+	
+}
+.logo img{
+	width: 150px;
+	height: 60px;
+	
+}
+.middle{
+	width: 1280px;
+	height: 635px;
+	background: #E9E9E9;
+}
+.weibu_3{
+	height: 170px;
+	
+}
+
+.weibu_3_1 {
+	margin-left: 300px;
+	margin-top: 30px;
+	
+	height: 60px;
+ 
+}
+
+.weibu_3_1 li{
+	float: left;
+	font-size: 20px;
+	padding: 0px 30px;
+	border-left: 1px solid #bfbfbf;
+}
+.weibu_3_2 {
+	margin-left: 350px;
+	
+	height: 30px;
+   
+}
+.weibu_3_3 {
+	margin-left: 600px;
+	width: 100px;
+	height: 40px;
+   
+}
+.weibu_3_4 {
+	margin-left: 550px;
+	width: 250px;
+	height: 20px;
+   
+}
+.weibu_3_4 img{
+	float: left;
+}
+.weibu_3_4 p{
+	float: left;
+}
+.middle ul{
+	overflow: hidden;
+	margin-top: 20px;
+	margin-left: 350px;
+}
+.middle li{
+	margin-left: 20px;
+	float: left;
+	width: 245px;
+	height: 45px;
+	text-align: center;
+	line-height: 45px;
+	background: white;
+}
+.middle_1{
+	overflow: hidden;
+	width: 1000px;
+	height: 535px;
+	background: white;
+	margin-left: 150px;
+	margin-top: 1px;
+	display: none;
+}
+.middle_1_1{
+	width: 420px;
+	height: 500px;
+	
+	margin-left: 50px;
+	margin-top: 20px;
+	float: left;
+}
+.middle_1_2{
+	float: left;
+	width: 400px;
+	height: 500px;
+	
+	margin-left: 50px;
+	margin-top: 20px;
+}
+.middle_1_2 img{
+	margin-top: 150px;
+	margin-left: 50px;
+}
+.btn{
+	width: 100px;
+	height: 30px;
+}
+.btn2{
+	width: 100px;
+	height: 30px;
+}
+.middle_2{
+	overflow: hidden;
+	width: 1000px;
+	height: 535px;
+	background: white;
+	margin-left: 150px;
+	margin-top: 1px;
+	display: none;
+	
+}
+.middle_2_1{
+	width: 420px;
+	height: 500px;
+	
+	margin-left: 50px;
+	margin-top: 20px;
+	float: left;
+}
+.middle_2_1 img{
+	margin-top: 150px;
+	margin-left: 50px;
+}
+.middle_2_2{
+	float: left;
+	width: 400px;
+	height: 300px;
+	
+	margin-left: 50px;
+	margin-top: 150px;
+}
+.btnborder{
+	border: solid 1px gray;
+}
+		</style>
+	   
+	
+		<script>
+					  $(function(){
+							    var  $headli = $(".head li");
+							      $headli.eq(0).addClass("headli_1");
+							      //点击母婴之家时，添加样式
+							      $headli.on("click",function(){  
+							           $(this).addClass("headli_1");
+							           $(this).siblings("li").removeClass("headli_1");
+							      });
+							      //鼠标划过手机版是小图标的动画效果
+							      $headli.eq(2).on("mouseenter",function(){
+							           $(this).addClass("headli");
+							           $(this).find("img").animate({"top":"-25px"},100);
+							           console.log("a");
+							      });
+							      //鼠标离开手机版小图标时的动画效果
+							      $headli.eq(2).on("mouseleave",function(){
+							           $(this).removeClass("headli");
+							           $(this).find("img").animate({"top":"15px"},100);
+							           console.log("b");
+							      });
+//				               点击注册登录按钮触发的事件
+                                var $btn =$(".middle li").eq(0);
+                                var $btn2 =$(".middle li").eq(1);
+                                $(".middle_1").show();
+                                $btn.addClass("btnborder");
+                                $btn.on("click",function(){
+                                	$btn.addClass("btnborder");
+                                	$btn2.removeClass("btnborder");
+                                	$(".middle_1").show();
+                                	$(".middle_2").hide();
+                                	
+                                });
+                                $btn2.on("click",function(){
+                                	$btn2.addClass("btnborder");
+                                	$btn.removeClass("btnborder");
+                                	$(".middle_2").show();
+                                	$(".middle_1").hide();
+                                });
+				      
+				   });
+		</script>
+		<script src="../js/cookie.js"></script>
+		<!--<script src="../js/dengluyangzheng.js"></script>-->
+			<script>
+			onload =function(){
+				var btn = document.getElementById("btn");
+				var btn2 = document.getElementById("btn2");
+				var bb3 = document.getElementById("bb3");
+				var bb4 = document.getElementById("bb4");
+				var oinput = document.getElementsByTagName("input");
+				var Dzhanghu = document.getElementById("zhanghu");
+				var Dmima = document.getElementById("mima");
+
+				//获取封装的cookie
+				var sj = getCookie("name1");
+				var mm = getCookie("name2");
+				
+				    console.log(sj);
+					console.log(bb3.innerHTML);
+					   btn2.onclick=function(){
+					   	bb3.innerHTML=sj;
+							bb4.innerHTML="退出";
+							bb3.style.color="red";
+					   }
+					
+				
+				var d = new Date;//新建日期
+		        d.setDate(d.getDate() + 365);//设置cookies存放的时间
+				//点击提交注册时
+				btn.onclick = function(){
+					var shouji = oinput[0].value;
+					var mima = oinput[1].value;
+					  setCookie("name1",shouji,d,"/");
+					  setCookie("name2",mima,d,"/");
+					 var sj = getCookie("name1","/");
+					console.log(shouji);
+				  	
+					if(confirm("你确定跳转么")){
+						return true;
+					}else{
+						return false;
+					}
+			      
+					
+				}
+				//点击登陆时
+				btn2.onclick = function(){
+					var dzhanghu = Dzhanghu.value;
+					var middle = document.getElementById("middle");
+					var dmima = Dmima.value;
+					  
+					if(dzhanghu==sj){
+						console.log("成功");
+						 console.log(sj);
+					   bb3.innerHTML=sj;
+					   bb3.style.color="red";
+					   bb4.innerHTML="退出";
+					   middle.style.display="none";
+					   bb4.onclick = function(){
+					   	
+					    removeCookie("name1");
+					    bb3.innerHTML="登录";
+					    bb4.innerHTML="免费注册";
+				       }
+					}else{
+						console.log("失败");
+					}
+				}	    
+			}
+		</script>
+	</head>
+	<body>
+		<div class="navigation">
+				<a href="#"><img src="../img/static/first.jpg" /></a>
+				<div class="head">
+					<ul>
+						<li><a href="../index.html">母婴之家</a></li>
+						<li><a href="#">母婴海淘</a></li>
+						<li class="oli"><a href="#"><img src="../img/dynamic/shouji.png"/>手机版</a></li>
+					</ul>
+					<div>
+						<span>欢迎来到母婴之家！&ensp;&ensp;<a id="bb3" href="#">登录]</a>&ensp;<a id="bb4" href="#">[免费注册]</a></span>
+						<span><a href="#">我的订单</a></span>
+						<span><a href="#">客户服务</a></span>
+						<span><a href="#">商业合作</a></span>
+						<span><a href="#">网址导航</a></span>
+					</div>
+				</div>
+				<div class="logo">
+						<a href="#"><img src="../img/static/logo29new.png" /></a>
+				</div>	
+				
+		</div>
+		
+		<div class="middle" id="middle">
+			<ul>
+				<li>注册</li>
+				<li>登录</li>
+			</ul>
+			<!--注册的盒子-->
+			<div class="middle_1">
+				<div class="middle_1_1">
+				&ensp;&ensp;&ensp;&ensp;手机号：<input type="text" placeholder="请输入手机号"/><br/><br/>
+				请设置密码：<input type="text" placeholder="请输入密码"/><br/><br/>
+				请确认密码：<input type="text" placeholder="请输入密码"/><br/><br/>
+				&ensp;&ensp;&ensp;&ensp;验证码：<input type="text" placeholder="请输入验证码"/>
+				<b>ABCDE</b><span>看不清，换一张</span>
+				<br/><br/>
+				是否有宝宝：<input type="radio" name="rel">已有宝宝
+				<input type="radio" name="rel">怀孕中
+				<br/><br/>
+				宝宝的性别：<input type="radio" name="sex" />小公主
+				<input type="radio" name="sex" />小王子
+				<br/><br/>
+				宝宝的生日：<input type="text" placeholder="" />
+				<br /><br/>
+				&ensp;&ensp;邮箱地址：<input type="text" placeholder="请输入邮箱"/>
+				<br /><br/>
+				您是宝宝的：<input type="radio" name="family"  />爸爸
+				<input type="radio" name="family"  />妈妈
+				<input type="radio" name="family"  />亲友
+				<br /><br/>
+				<input type="checkbox" name="like" />阅读并同意“母婴之家网站用户协议”
+				<br /><br/>
+				<a href="zhuce2.html"><input class="btn" id="btn" type="submit" value="提交注册"/></a>
+				</div>
+				<div class="middle_1_2">
+				    <img src="../img/static/erweima.png" />
+				</div>
+			</div>
+			<!--登录的盒子-->
+			<div class="middle_2">
+				<div class="middle_2_1">
+					<img src="../img/static/erweima.png" />
+				</div>
+				<div class="middle_2_2">
+					账户名：<input type="text" id="zhanghu" placeholder="请输入手机号" /><br/><br/>
+					&ensp;&ensp;密码：<input id="mima" type="text" placeholder="请输入密码" /><br/><br/>
+				      验证码：<input type="text" placeholder="请输入验证码"/><b>ABCDE</b><span>看不清，换一张</span><br /><br/>
+				     <input type="checkbox" name="like" />记住我 （30天内免登陆）<a>忘记密码？</a><br /><br/>
+				     <input class="btn2" id="btn2" type="submit" value="立即登录"/>
+				</div>
+			</div>
+		</div>     
+		
+		
+		<div class="weibu_3">
+					<div class="weibu_3_1">
+							<ul>
+								<li class="oli"><a href="#">首页</a></li>
+								<li><a href="#">公司简介</a></li>
+								<li><a href="#">人才招聘</a></li>
+								<li><a href="#">合作联系</a></li>
+								<li><a href="#">企业理念</a></li>
+							</ul>
+					</div>
+					<div class="weibu_3_2">
+					    <p> Copyright©2003 - 2016 muyingzhijia.com All Rights Reserved沪ICP备09021709号 </p>
+					</div>
+					<div class="weibu_3_3">
+						<img src="../img/static/shanghai_industry.gif"/>
+					</div>
+					<div class="weibu_3_4">
+						<img src="../img/static/ghs.png" />
+						<p><a href="#">沪公网安备 31010402000751号</a></p>
+					</div>
+		</div>
+		
+	</body>
+</html>
